@@ -1,8 +1,13 @@
-class Solution(object):
+class Solution:
     def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
         record = {}
-        for i in range(len(nums)):
-            cop = target-nums[i]
-            if cop in record:
-                return [record[cop],i]
+        for i in range(0,len(nums)):
+            temp = target - nums[i]
+            if temp in record:# in 是判断键值
+                return [i,record[temp]]
             record[nums[i]] = i
