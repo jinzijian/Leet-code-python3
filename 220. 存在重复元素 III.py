@@ -1,3 +1,13 @@
+'''python OrderedDict()
+如果：| nums[i] - nums[j] | <= t 式a
+等价：| nums[i] / t - nums[j] / t | <= 1 式b
+推出：| floor(nums[i] / t) - floor(nums[j] / t) | <= 1 式c
+等价： floor(nums[j] / t) ∈ {floor(nums[i] / t) - 1, floor(nums[i] / t), floor(nums[i] / t) + 1}式d
+其中式b是式c的充分非必要条件，因为逆否命题与原命题等价，所以：
+如果： floor(nums[j] / t) ∉ {floor(nums[i] / t) - 1, floor(nums[i] / t), floor(nums[i] / t) + 1}非d
+推出：| nums[i] - nums[j] | > t 非a
+如果 popitem(last=False) 将弹出第一个插入的键值对
+'''
 from collections import OrderedDict
 class Solution(object):
     def containsNearbyAlmostDuplicate(self, nums, k, t):
