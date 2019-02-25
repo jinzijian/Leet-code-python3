@@ -1,0 +1,21 @@
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        stack = []
+        for ch in s:
+            if ch == "("or ch=="["or ch =="{":
+                stack.append(ch)
+                #压栈
+            else:
+                if not stack:#确保非空
+                    return False
+                if ch == ']' and stack[-1] != '[' or ch == ')' and stack[-1] != '(' or ch == '}' and stack[-1] != '{':
+                    return False
+                # 弹栈
+                stack.pop()
+        return not stack#确保是空的
+            
+        
