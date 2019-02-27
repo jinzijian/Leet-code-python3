@@ -1,9 +1,4 @@
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+#方法一：递归方法
 #左子树 ---> 根结点 ---> 右子树
 
 class Solution(object):
