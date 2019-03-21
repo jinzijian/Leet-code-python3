@@ -1,0 +1,16 @@
+class Solution(object):
+    def permuteUnique(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        nums.sort()#通过排序把相同值放在一起
+        def dfs(nums,res,path):
+            if not nums:
+                res.append(path)
+            for i in range(len(nums)):
+                if i>0 and nums[i] == nums[i-1]:continue#判断跳过每一层
+                dfs(nums[:i]+nums[i+1:],res,path+[nums[i]])
+        res = []
+        dfs(nums,res,[])
+        return res       
