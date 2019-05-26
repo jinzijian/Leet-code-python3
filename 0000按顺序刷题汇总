@@ -1,19 +1,23 @@
 Array
 27	Remove Element	
+未能独立写出
 删除元素后，数组长度会发生变化所以只能用while不能用for
 26	Remove Duplicates from Sorted Array	
 快慢指针法
 80	Remove Duplicates from Sorted Array II	
 三指针法和上题雷同
 277	Find the Celebrity	
+未能独立写出
 方法：如果a认识b，则a不会是名人；如果a不认识b，则b不会是名人。
 因此每询问一次a是否认识b，都可以排除掉一个人，所以在O(n)时间内就可以排除掉n-1个人。
 最后还要检查确认，是否其他人都认识这个人，以及这个人都不认识其他人。
 189	Rotate Array	
+未能独立写出
 在保持原数组不变情况下用切片方法
 41	First Missing Positive	
 简单逻辑判断即可 注意审题和数组下标
 299	Bulls and Cows	
+未能独立写出
 利用字典和min函数避免重复字符问题
 134	Gas Station	
 118	Pascal's Triangle	很少考
