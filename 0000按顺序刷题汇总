@@ -6,8 +6,13 @@ Array
 80	Remove Duplicates from Sorted Array II	
 三指针法和上题雷同
 277	Find the Celebrity	
+方法：如果a认识b，则a不会是名人；如果a不认识b，则b不会是名人。
+因此每询问一次a是否认识b，都可以排除掉一个人，所以在O(n)时间内就可以排除掉n-1个人。
+最后还要检查确认，是否其他人都认识这个人，以及这个人都不认识其他人。
 189	Rotate Array	
+在保持原数组不变情况下用切片方法
 41	First Missing Positive	
+简单逻辑判断即可 注意审题和数组下标
 299	Bulls and Cows	
 134	Gas Station	
 118	Pascal's Triangle	很少考
