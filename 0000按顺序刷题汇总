@@ -55,11 +55,18 @@ Array
 *    既然如此，只要citation[i] ≥ h，就满足题意(因为第一次执行成功的就是最大值）。
 */
 275	H-Index II	Binary Search
+未能独立写出
+二分查找
 
 243	Shortest Word Distance	
+绝对值abs
+无限inf
 244	Shortest Word Distance II	
+完全不懂 需要教学
 245	Shortest Word Distance III	
+不懂
 217	Contains Duplicate	
+
 219	Contains Duplicate II	很少考
 220	Contains Duplicate III	很少考
 55	Jump Game	
