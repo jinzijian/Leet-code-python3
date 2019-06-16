@@ -5,15 +5,7 @@ class Solution(object):
         :type node: ListNode
         :rtype: void Do not return anything, modify node in-place instead.
         """
-        if node == None:#为了指针合法
-            return
-        if node.next == None:#为了指针合法
-            node = None
-            return
-        temp = node.next.val
-        node.val = temp
-        delnode = node.next
-        node.next = delnode.next
-        return
+        node.val = node.next.val
+        node.next = node.next.next
         
         
