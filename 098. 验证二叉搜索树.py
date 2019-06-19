@@ -1,20 +1,24 @@
 class Solution(object):
+    #中序遍历之后判断数组是否严格递增
     def isValidBST(self, root):
         """
         :type root: TreeNode
         :rtype: bool
         """
-        if root == None:
+        def inorder(root):
+            if not root:
+                return
+            inorder(root.left)
+            res.append(root.val)
+            inorder(root.right)
+
+        res = []
+        if not root:
             return True
-        if root.left == None and root.right == None:
-            return True
-        if root.left and root.right and (root.left.val > root.val or root.right.val< root.val):
-            return False
-        if root.left == None and root.right.val<=root.val:
-            return False
-        if root.right == None and root.left.val >= root.val:
-            return False
-        self.isValidBST(root.left)
-        self.isValidBST(root.right)
+        inorder(root)
+        for i in range(1, len(res)):
+            if res[i]<= res[i-1]:
+                return False
         return True
-    #这个是错的 原因是没有进行跨层比较
+        
+        
